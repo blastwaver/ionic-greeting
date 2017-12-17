@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -8,11 +8,9 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-item>
+    <ion-label floating>Name</ion-label>
+    <ion-input type="type" [(ngModel)]="personName"></ion-input> 
+  </ion-item>
+  <button ion-button block clear (click)="showGreeting(personName)">Show Greeting</button>
 </ion-content>
